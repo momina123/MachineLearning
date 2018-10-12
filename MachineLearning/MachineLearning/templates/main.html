@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<div>
+		<form method="post" action="{{url_for('predict')}}">
+			<div class="row">
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="hair" name="hair"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="feathers" name="feathers"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="eggs" name="eggs"><br/>
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="milk" name="milk"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="airbone" name="airbone"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="aquatic" name="aquatic"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="predator" name="predator"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="toothed" name="toothed"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="backbone" name="backbone"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="breathes" name="breathes"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="venomous" name="venemous"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="fins" name="fins"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="legs" name="legs"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="tail" name="tail"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="domestic" name="domestic"><br />
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control" placeholder="catsize" name="catsize"><br />
+				</div>
+				
+				
+			</div>
+			<button class="btn btn-primary pull-right" type="submit">Predict</button>
+		</form>
+	</div>
+{% endblock %}

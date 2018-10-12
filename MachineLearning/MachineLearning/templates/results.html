@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<table class="table table-bordered">
+		<tr>
+			<td><b>hair</b></td>
+			<td>{% print(request.form['hair']) %} </td>
+
+			<td><b>feathers</b></td>
+			<td>{% print(request.form['feathers']) %} </td>
+		</tr>
+		<tr>
+			<td><b>eggs</b></td>
+			<td>{% print(request.form['eggs']) %} </td>
+
+			<td><b>milk</b></td>
+			<td>{% print(request.form['milk']) %} </td>
+		</tr>
+		<tr>
+			<td><b>airbone</b></td>
+			<td>{% print(request.form['airbone']) %} </td>
+
+			<td><b>aquatic</b></td>
+			<td>{% print(request.form['aquatic']) %} </td>
+		</tr>
+		<tr>
+			<td><b>predator</b></td>
+			<td>{% print(request.form['predator']) %} </td>
+
+			<td><b>toothed</b></td>
+			<td>{% print(request.form['toothed']) %} </td>
+		</tr>
+		<tr>
+			<td><b>backbone</b></td>
+			<td>{% print(request.form['backbone']) %} </td>
+
+			<td><b>breathes</b></td>
+			<td>{% print(request.form['breathes']) %} </td>
+		</tr>
+		<tr>
+			<td><b>venomous</b></td>
+			<td>{% print(request.form['venomous']) %} </td>
+
+			<td><b>fins</b></td>
+			<td>{% print(request.form['fins']) %} </td>
+		</tr>
+		<tr>
+			<td><b>legs</b></td>
+			<td>{% print(request.form['legs']) %} </td>
+
+			<td><b>tail</b></td>
+			<td>{% print(request.form['tail']) %} </td>
+		</tr>
+		<tr>
+			<td><b>domestic</b></td>
+			<td>{% print(request.form['domestic']) %} </td>
+
+			<td><b>catsize</b></td>
+			<td>{% print(request.form['catsize']) %} </td>
+			
+		</tr>
+		<tr>
+			<th colspan="4" style="text-align: center; text-transform: uppercase;"><b>ANIMAL CLASS:
+				{% if prediction == 0 %}
+					Class0
+				{% elif prediction == 2 %}
+					Class2
+				{% elif prediction == 1 %}
+					Class1
+				{% elif prediction == 3 %}
+				    Class3
+				{% elif prediction == 4 %}
+				    Class4
+				{% elif prediction == 5 %}
+				    Class5
+				{% elif prediction == 6 %}
+				    Class6
+				{% elif prediction == 7 %}
+				    Class7
+				{% endif %}
+			</b></th>
+		</tr>
+	</table>	
+	<a href="/" class="btn btn-primary btn-sm pull-right">Back</a>
+{% endblock %}
